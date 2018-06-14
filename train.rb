@@ -15,6 +15,7 @@ class Train
     @type = type
     @carriages = []
     @route = nill
+    @current_station_index = 0
   end
   def acceleration (speed = 20)
     self.speed = speed
@@ -30,5 +31,11 @@ class Train
   end
   def add_route(route)
     self.route = route
+  end
+  def current_station
+    route.stations[current_station_index]
+  end
+  def next_station
+    route.stations[current_station_index + 1]
   end
 end
