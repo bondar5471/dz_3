@@ -32,5 +32,3 @@ class Train
     self.route = route
   end
 end
-
-

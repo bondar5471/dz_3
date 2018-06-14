@@ -14,7 +14,7 @@ class Station
     self.trains << train
   end
   def dell_train(train)
-    trains.delete (train) 
+    trains.delete (train)
   end
   def print_list_train
     p @trains
