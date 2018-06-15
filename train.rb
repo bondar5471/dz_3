@@ -5,38 +5,53 @@
 #Может показывать количество вагонов
 #Может прицеплять/отцеплять вагоны (по одному вагону за операцию, метод просто увеличивает или уменьшает количество вагонов). Прицепка/отцепка вагонов может осуществляться только если поезд не движется.
 #Может принимать маршрут следования (объект класса Route)
-#Может перемещаться между станциями, указанными в маршруте. Показывать предыдущую станцию, текущую, следующую, на основе маршрута
+##Может перемещаться между станциями, указанными в маршруте. Показывать предыдущую станцию, текущую, следующую, на основе маршрута
 class Train
-  attr_accessor :number
-  attr_accessor :type
-  attr_accessor :carriages
+  attr_accessor :number,
+                :type,
+                :carriages,
+                :speed,
+                :route
+
   def initialize (number, type, carriages )
     @number = number
     @speed = 0
     @type = type
     @carriages = carriages
     @route = nil
-    @current_station_index = 0
+    @start_stations = nil
   end
+
   def acceleration (speed = 20)
-    self.speed = speed
+    @speed = speed
   end
+
   def stop
     self.speed = 0
   end
+
   def add_carriages
     self.carriages +=1 if speed.zero?
   end
+
   def dell_carriages
     self.carriages -=1 if speed.zero?
   end
+
   def add_route(route)
     self.route = route
   end
+
   def current_station
-    route.stations[current_station_index]
+    route.stations[start_stations]
   end
+
   def next_station
-    route.stations[current_station_index + 1]
+    current_station + 1
   end
+
+  def prev_station
+    current_station - 1
+  end
+
 end
