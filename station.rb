@@ -23,11 +23,11 @@ class Station
   end
 
   def print_list_train
-    p @trains.gets
+    p @trains
   end
 
   def print_lis_type
-    trains.select { |c_train| c_train.type == type }.join(' ')
+
   end
 
 end

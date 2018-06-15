@@ -20,6 +20,7 @@ class Train
     @carriages = carriages
     @route = nil
 
+
   end
 
   def acceleration (speed = 20)
