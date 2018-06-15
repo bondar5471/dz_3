@@ -6,10 +6,12 @@
 class Station
   attr_accessor :name,
                 :trains
+                :type
 
   def initialize (name)
     @name = name
     @trains = []
+    @type = nil
   end
 
   def add_train (train)
@@ -21,7 +23,11 @@ class Station
   end
 
   def print_list_train
-    p @trains
+    p @trains.gets
+  end
+
+  def print_lis_type
+    trains.select { |c_train| c_train.type == type }.join(' ')
   end
 
 end
