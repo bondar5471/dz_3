@@ -9,8 +9,6 @@
 class Train
   attr_accessor :number, :type, :carriages, :speed, :route
 
-
-
   def initialize (number, type, carriages )
     @number = number
     @speed = 0
