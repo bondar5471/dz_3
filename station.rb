@@ -4,30 +4,42 @@
 ##Может показывать список поездов на станции по типу (см. ниже): кол-во грузовых, пассажирских
 #Может отправлять поезда (по одному за раз, при этом, поезд удаляется из списка поездов, находящихся на станции).
 class Station
-  attr_accessor :name,
-                :trains
-                :type
+  attr_accessor :name, :trains, :type
 
   def initialize (name)
     @name = name
     @trains = []
     @type = nil
+    @pass = 0
+    @carrg = 0
   end
 
   def add_train (train)
     self.trains << train
-  end
+    if train.type == 'pass'
+      @pass +=1
+    elsif train.type == 'carrg'
+      @carrg += 1
+    end
+
+    end
 
   def dell_train(train)
     trains.delete (train)
+    if train.type == 'pass'
+      @pass -=1
+    elsif train.type == 'carrg'
+      @carrg -= 1
+    end
   end
 
   def print_list_train
     p @trains
   end
 
-  def print_lis_type
-
+  def print_list_type
+p "Pass #{@pass}, Carrg #{@carrg}"
   end
-
 end
+
+

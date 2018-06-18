@@ -7,11 +7,9 @@
 #Может принимать маршрут следования (объект класса Route)
 #Может перемещаться между станциями, указанными в маршруте. Показывать предыдущую станцию, текущую, следующую, на основе маршрута
 class Train
-  attr_accessor :number,
-                :type,
-                :carriages,
-                :speed,
-                :route
+  attr_accessor :number, :type, :carriages, :speed, :route
+
+
 
   def initialize (number, type, carriages )
     @number = number
@@ -19,7 +17,6 @@ class Train
     @type = type
     @carriages = carriages
     @route = nil
-
 
   end
 
@@ -31,8 +28,8 @@ class Train
     self.speed = 0
   end
 
-  def add_carriages
-    self.carriages +=1 if speed.zero?
+  def add_carriages (carriage)
+    self.carriages +=1 if speed.zero? && carriage.type == type
   end
 
   def dell_carriages
