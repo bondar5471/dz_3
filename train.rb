@@ -15,7 +15,6 @@ class Train
     @type = type
     @carriages = carriages
     @route = nil
-
   end
 
   def acceleration (speed = 20)
