@@ -40,9 +40,11 @@ class Station
   def print_list_type
 p "Pass #{@pass}, Carrg #{@carrg}"
   end
+
   def trains_list
     self.trains.map(&:number).join(' ')
   end
+
   def train_list_by_type
     self.trains.select { |c_train| c_train.type == type }.join(' ')
   end

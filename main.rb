@@ -14,7 +14,7 @@ class Main
   def text_ui
   loop do
     action = choose_action
-    break if action = 0
+    break if action == 0
     case action
     when 1
       create_station
@@ -32,7 +32,6 @@ class Main
       puts 'Неверный код операции'
     end
   end
-  puts 'введите следующее действие'
   end
 
   private
@@ -40,7 +39,7 @@ class Main
   def train_on_station
     station = choose_station
     return puts "Нет такой станции" unless station
-    puts "Список поездов на станции #{station.name}: #{station.train_list}"
+    puts "Список поездов на станции #{station.name}: #{station.trains_list}"
   end
 
   def add_train_to_station
@@ -53,7 +52,7 @@ class Main
   end
 
   def choose_station
-    puts "Список станций #{stations_list}"
+    puts "Список станций #{station_list}"
     puts "Введите имя станции"
     station_name = gets.chomp
     station_by_name(station_name)
@@ -69,7 +68,7 @@ class Main
 
   def dell_carriage
     train = choose_train
-    train.dell_carriage
+    train.dell_carriages
       puts 'Вагон отцепили'
   end
 
@@ -108,6 +107,7 @@ class Main
     puts 'Введите номер поезда'
     train_number = gets.chomp
     case train_type
+
     when 1
       trains << PassengerTrain.new(train_number)
       puts "Пасажирский поезд успешно создан c номером #{train_number}!"
@@ -122,15 +122,16 @@ class Main
   def create_station #Создать станцию
   puts "Введите название станции"
   station_name = gets.chomp
-  stations << Station.new (station_name)
+  stations << Station.new(station_name)
   puts "Станция #{station_name} создана"
   end
+#.map _map
 
-  def train_list(type = nil)
+  def trains_list(type = nil)
     if type
-      self.trains map{ |t| t.number if t.type == type}.compact.join(' ')
+      self.trains.map{ |t| t.number if t.type == type}.compact.join(' ')
     else
-      self.trains map(&:number).join(' ')
+      self.trains.map(&:number).join(' ')
     end
   end
 
