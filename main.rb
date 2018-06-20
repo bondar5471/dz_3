@@ -49,7 +49,7 @@ class Main
   def train_on_station
     station = choose_station
     return puts 'Нет такой станции' unless station
-    puts "Список поездов на станции #{ station.name }: #{ station.trains_list }"
+    puts "Список поездов на станции #{station.name}: #{station.trains_list}"
   end
 
   def add_train_to_station
@@ -58,11 +58,11 @@ class Main
     train = choose_train
     return puts 'Нет такого поезда' unless train
     station.add_train(train)
-    puts "Поезд #{train.number} добавлен на станцию #{ station.name }"
+    puts "Поезд #{train.number} добавлен на станцию #{station.name}"
   end
 
   def choose_station
-    puts "Список станций #{ station_list }"
+    puts "Список станций #{station_list}"
     puts 'Введите имя станции'
     station_name = gets.chomp
     station_by_name(station_name)
@@ -91,7 +91,7 @@ class Main
       train.add_carriage
       puts 'Пассажирский вагон добавлен'
       when :cargo_trains
-        train.add_carriage
+      train.add_carriage
       puts 'Пассажирский вагон добавлен'
       end
     end
@@ -132,15 +132,15 @@ class Main
 #Создать станцию
 
   def create_station
-  puts "Введите название станции"
+  puts 'Введите название станции'
   station_name = gets.chomp
   stations << Station.new(station_name)
-  puts "Станция #{ station_name } создана"
+  puts "Станция #{station_name} создана"
   end
 
   def trains_list(type = nil)
     if type
-      self.trains.map{ |t| t.number if t.type == type }.compact.join(' ')
+      self.trains.map { |t| t.number if t.type == type }.compact.join(' ')
     else
       self.trains.map(&:number).join(' ')
     end
