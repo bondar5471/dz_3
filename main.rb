@@ -1,9 +1,17 @@
+# Создавать станции
+# Создавать поезда
+# Добавлять вагоны к поезду
+# Отцеплять вагоны от поезда
+# Помещать поезда на станцию
+# Просматривать список станций и список поездов на станции
 require_relative 'train'
 require_relative 'station'
 require_relative 'route'
 require_relative 'passenger_train'
 require_relative 'cargo_train'
+
 class Main
+
   attr_accessor :stations, :trains
 
   def initialize
@@ -13,7 +21,9 @@ class Main
 
   def text_ui
   loop do
+
     action = choose_action
+
     break if action == 0
     case action
     when 1
@@ -31,29 +41,29 @@ class Main
     else
       puts 'Неверный код операции'
     end
-  end
+      end
   end
 
   private
 
   def train_on_station
     station = choose_station
-    return puts "Нет такой станции" unless station
-    puts "Список поездов на станции #{station.name}: #{station.trains_list}"
+    return puts 'Нет такой станции' unless station
+    puts "Список поездов на станции #{ station.name }: #{ station.trains_list }"
   end
 
   def add_train_to_station
     station = choose_station
-    return puts "Нет такой станции" unless station
+    return puts 'Нет такой станции' unless station
     train = choose_train
-    return puts "Нет такого поезда" unless train
+    return puts 'Нет такого поезда' unless train
     station.add_train(train)
-    puts "Поезд #{train.number} добавлен на станцию #{station.name}"
+    puts "Поезд #{train.number} добавлен на станцию #{ station.name }"
   end
 
   def choose_station
-    puts "Список станций #{station_list}"
-    puts "Введите имя станции"
+    puts "Список станций #{ station_list }"
+    puts 'Введите имя станции'
     station_name = gets.chomp
     station_by_name(station_name)
   end
@@ -69,15 +79,16 @@ class Main
   def dell_carriage
     train = choose_train
     train.dell_carriages
-      puts 'Вагон отцепили'
+    puts 'Вагон отцепили'
   end
 
   def add_carriage
     train = choose_train
+
     if train
       case train.type
       when :passenger_train
-        train.add_carriage
+      train.add_carriage
       puts 'Пассажирский вагон добавлен'
       when :cargo_trains
         train.add_carriage
@@ -88,13 +99,13 @@ class Main
 
   def choose_train
     puts "Список поездов #{trains_list}"
-    puts "Введите номер поезда"
+    puts 'Введите номер поезда'
     train_number = gets.chomp
-    train_by_number (train_number)
+    train_by_number(train_number)
   end
 
   def train_by_number(number)
-    self.trains.select {|train| train.number == number}.first
+  self.trains.select { |train| train.number == number }.first
   end
 
   def create_train ##Создать поезд
@@ -110,26 +121,26 @@ class Main
 
     when 1
       trains << PassengerTrain.new(train_number)
-      puts "Пасажирский поезд успешно создан c номером #{train_number}!"
+      puts "Пасажирский поезд создан c номером #{train_number}!"
     when 2
       trains << CargoTrain.new(train_number)
-      puts "Грузовой поезд успешно создан c номером #{train_number}!"
+      puts "Грузовой поезд создан c номером #{train_number}!"
     else
       'Не верный код'
     end
   end
+#Создать станцию
 
-  def create_station #Создать станцию
+  def create_station
   puts "Введите название станции"
   station_name = gets.chomp
   stations << Station.new(station_name)
-  puts "Станция #{station_name} создана"
+  puts "Станция #{ station_name } создана"
   end
-#.map _map
 
   def trains_list(type = nil)
     if type
-      self.trains.map{ |t| t.number if t.type == type}.compact.join(' ')
+      self.trains.map{ |t| t.number if t.type == type }.compact.join(' ')
     else
       self.trains.map(&:number).join(' ')
     end
@@ -150,7 +161,3 @@ class Main
 end
 
 Main.new.text_ui
-
-
-
-

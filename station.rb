@@ -38,7 +38,7 @@ class Station
   end
 
   def print_list_type
-p "Pass #{@pass}, Carrg #{@carrg}"
+p "Pass #{ @pass }, Carrg #{ @carrg }"
   end
 
   def trains_list
@@ -49,4 +49,3 @@ p "Pass #{@pass}, Carrg #{@carrg}"
     self.trains.select { |c_train| c_train.type == type }.join(' ')
   end
 end
-

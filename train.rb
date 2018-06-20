@@ -10,7 +10,7 @@
 class Train
   attr_accessor :number, :type, :carriages, :speed, :route, :current_station_index
 
-  def initialize (number)
+  def initialize(number)
     @number = number
     @speed = 0
     @type = type
@@ -19,7 +19,7 @@ class Train
     @current_station_index = 0
   end
 
-  def acceleration (speed = 20)
+  def acceleration(speed = 20)
     @speed = speed
   end
 
@@ -27,12 +27,12 @@ class Train
     self.speed = 0
   end
 
-  def add_carriages (carriage)
+  def add_carriages(carriage)
     carriages << carriage if speed.zero? && carriage.type == type
   end
 
   def dell_carriages
-    carriages.delete_at (-1)  if speed.zero?
+    carriages.delete_at(-1)  if speed.zero?
   end
 
   def add_route(route)
