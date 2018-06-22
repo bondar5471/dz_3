@@ -10,6 +10,8 @@
 class Train
   attr_accessor :number, :type, :carriages, :speed, :route, :current_station_index
 
+  include Company
+
   def initialize(number)
     @number = number
     @speed = 0
@@ -50,5 +52,9 @@ class Train
   def prev_station
     route.stations[current_station_index - 1] if current_station_index >= 1
   end
+
+ # def find(number)
+
+ # end
 
 end

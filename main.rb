@@ -105,11 +105,11 @@ class Main
   end
 
   def train_by_number(number)
-  self.trains.select { |train| train.number == number }.first
+    self.trains.select { |train| train.number == number }.first
   end
 
   def create_train ##Создать поезд
-    puts %q(Введите тип поезда который хотите создать!
+    puts %(Введите тип поезда который хотите создать!
       1 - Пасажирский
       2 - Товарный
     )
@@ -129,7 +129,6 @@ class Main
       'Не верный код'
     end
   end
-#Создать станцию
 
   def create_station
   puts 'Введите название станции'
@@ -147,7 +146,7 @@ class Main
   end
 
   def choose_action
-    puts %Q(
+    puts %(
     0 - Выход
     1 - Создать стацию
     2 - Создать поезд

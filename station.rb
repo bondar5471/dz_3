@@ -6,12 +6,17 @@
 class Station
   attr_accessor :name, :trains, :type
 
+  include Company
+
+  @@instanses = []
   def initialize (name)
     @name = name
     @trains = []
     @type = nil
     @pass = 0
     @carrg = 0
+    @@instanses << self
+
   end
 
   def add_train (train)
@@ -47,5 +52,12 @@ p "Pass #{ @pass }, Carrg #{ @carrg }"
 
   def train_list_by_type
     self.trains.select { |c_train| c_train.type == type }.join(' ')
+  end
+
+  class << self
+    def all
+      @@instanses
+    end
+
   end
 end
