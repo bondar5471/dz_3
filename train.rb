@@ -8,9 +8,8 @@
 #Может перемещаться между станциями, указанными в маршруте. Показывать предыдущую станцию, текущую, следующую, на основе маршрута
 # можно разбить accessor на две часчи врайт зависать в приват
 class Train
-  attr_accessor :number, :type, :carriages, :speed, :route, :current_station_index
-
   include Company
+  attr_accessor :number, :type, :carriages, :speed, :route, :current_station_index
 
   def initialize(number)
     @number = number
@@ -53,8 +52,8 @@ class Train
     route.stations[current_station_index - 1] if current_station_index >= 1
   end
 
- # def find(number)
+  # def find(number)
 
- # end
+  # end
 
 end

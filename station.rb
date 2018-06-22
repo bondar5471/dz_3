@@ -4,11 +4,9 @@
 #Может показывать список поездов на станции по типу (см. ниже): кол-во грузовых, пассажирских
 #Может отправлять поезда (по одному за раз, при этом, поезд удаляется из списка поездов, находящихся на станции).
 class Station
+  include Company
   attr_accessor :name, :trains, :type
 
-  include Company
-
-  @@instanses = []
   def initialize (name)
     @name = name
     @trains = []
@@ -52,12 +50,5 @@ p "Pass #{ @pass }, Carrg #{ @carrg }"
 
   def train_list_by_type
     self.trains.select { |c_train| c_train.type == type }.join(' ')
-  end
-
-  class << self
-    def all
-      @@instanses
-    end
-
   end
 end

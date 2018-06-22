@@ -4,6 +4,7 @@
 # Отцеплять вагоны от поезда
 # Помещать поезда на станцию
 # Просматривать список станций и список поездов на станции
+require_relative 'company'
 require_relative 'train'
 require_relative 'station'
 require_relative 'route'

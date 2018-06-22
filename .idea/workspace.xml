@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7bb35cd0-cb6d-49d4-a326-e4cd5578e56f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/company.rb" afterDir="false" />
+    <list default="true" id="7bb35cd0-cb6d-49d4-a326-e4cd5578e56f" name="Default" comment="rubocop">
+      <change afterPath="$PROJECT_DIR$/cargo_carriage.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carriage.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/passenger_cariage.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cargo_train.rb" beforeDir="false" afterPath="$PROJECT_DIR$/cargo_train.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/company.rb" beforeDir="false" afterPath="$PROJECT_DIR$/company.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.rb" beforeDir="false" afterPath="$PROJECT_DIR$/main.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/station.rb" beforeDir="false" afterPath="$PROJECT_DIR$/station.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/train.rb" beforeDir="false" afterPath="$PROJECT_DIR$/train.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dz_3@main.rcov" NAME="main Coverage Results" MODIFIED="1529663351590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dz_3" />
+    <SUITE FILE_PATH="coverage/dz_3@main.rcov" NAME="main Coverage Results" MODIFIED="1529665009640" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dz_3" />
     <SUITE FILE_PATH="coverage/dz_3@train.rcov" NAME="train Coverage Results" MODIFIED="1529311133534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dz_3" />
     <SUITE FILE_PATH="coverage/dz_3@All_tests_in_dz_3__dz_3.rcov" NAME="All tests in dz_3: dz_3 Coverage Results" MODIFIED="1529397878947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="dz_3" />
   </component>
@@ -22,8 +29,8 @@
       <file leaf-file-name="train.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="1062">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
         </entry>
@@ -31,8 +38,8 @@
       <file leaf-file-name="station.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/station.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="428">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
             </state>
           </provider>
         </entry>
@@ -40,22 +47,62 @@
       <file leaf-file-name="main.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="-1728">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="company.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/company.rb">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="passenger_train.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/passenger_train.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="route.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/route.rb">
+      <file leaf-file-name="carriage.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/carriage.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cargo_train.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cargo_train.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cargo_carriage.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cargo_carriage.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="85" selection-start-column="85" selection-end-column="85" />
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="passenger_cariage.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/passenger_cariage.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="company.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/company.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -83,12 +130,15 @@
         <option value="$PROJECT_DIR$/passenger_carriages.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/passenger_train.rb" />
-        <option value="$PROJECT_DIR$/cargo_train.rb" />
         <option value="$PROJECT_DIR$/modules.rb" />
-        <option value="$PROJECT_DIR$/train.rb" />
-        <option value="$PROJECT_DIR$/station.rb" />
         <option value="$PROJECT_DIR$/main.rb" />
         <option value="$PROJECT_DIR$/company.rb" />
+        <option value="$PROJECT_DIR$/station.rb" />
+        <option value="$PROJECT_DIR$/carriage.rb" />
+        <option value="$PROJECT_DIR$/cargo_train.rb" />
+        <option value="$PROJECT_DIR$/passenger_cariage.rb" />
+        <option value="$PROJECT_DIR$/cargo_carriage.rb" />
+        <option value="$PROJECT_DIR$/train.rb" />
       </list>
     </option>
   </component>
@@ -102,9 +152,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="96" />
+    <option name="x" value="278" />
     <option name="y" value="-5" />
-    <option name="width" value="922" />
+    <option name="width" value="926" />
     <option name="height" value="987" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -247,7 +297,7 @@
       <workItem from="1529482470327" duration="827000" />
       <workItem from="1529494533124" duration="6014000" />
       <workItem from="1529586793045" duration="13000" />
-      <workItem from="1529660536016" duration="2972000" />
+      <workItem from="1529660536016" duration="6653000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1528969108155</created>
@@ -410,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529663168985</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="rubocop">
+      <created>1529663534187</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1529663534187</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -419,18 +476,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59610000" />
+    <option name="totallyTimeSpent" value="63291000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="111" y="170" width="922" height="955" extended-state="0" />
+    <frame x="69" y="-5" width="1851" height="1085" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32983193" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32983193" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3672806" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.38335434" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2986111" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32936078" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14389291" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32912987" />
@@ -467,27 +525,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/passenger_train.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cargo_train.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/route.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="85" selection-start-column="85" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -753,10 +790,17 @@
     <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/passenger_carriages.rb" />
     <entry file="file://$PROJECT_DIR$/cargo_carriages.rb" />
-    <entry file="file://$PROJECT_DIR$/cargo_train.rb">
+    <entry file="file://$PROJECT_DIR$/route.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state>
+          <caret column="85" selection-start-column="85" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/station.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
@@ -767,36 +811,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/route.rb">
+    <entry file="file://$PROJECT_DIR$/company.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="85" selection-start-column="85" selection-end-column="85" />
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cargo_train.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/carriage.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/passenger_cariage.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/station.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="-1728">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="1062">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/company.rb">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/cargo_carriage.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
