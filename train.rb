@@ -7,6 +7,8 @@
 #Может принимать маршрут следования (объект класса Route)
 #Может перемещаться между станциями, указанными в маршруте. Показывать предыдущую станцию, текущую, следующую, на основе маршрута
 # можно разбить accessor на две часчи врайт зависать в приват
+require_relative 'company'
+
 class Train
   include Company
   attr_accessor :number, :type, :carriages, :speed, :route, :current_station_index
@@ -52,8 +54,5 @@ class Train
     route.stations[current_station_index - 1] if current_station_index >= 1
   end
 
-  # def find(number)
-
-  # end
 
 end

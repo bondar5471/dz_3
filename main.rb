@@ -89,10 +89,10 @@ class Main
     if train
       case train.type
       when :passenger_train
-      train.add_carriage
+      train.add_carriages
       puts 'Пассажирский вагон добавлен'
-      when :cargo_trains
-      train.add_carriage
+      when :cargo_train
+      train.add_carriages
       puts 'Пассажирский вагон добавлен'
       end
     end
