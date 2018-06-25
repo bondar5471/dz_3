@@ -93,7 +93,7 @@ class Main
         puts 'Пассажирский вагон добавлен'
       when :cargo_train
         train.add_carriages
-        puts 'Пассажирский вагон добавлен'
+        puts 'Грузовой вагон добавлен'
       end
     end
   end
