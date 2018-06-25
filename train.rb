@@ -11,6 +11,8 @@ require_relative 'company'
 
 class Train
   include Company
+  @@instanses = []
+
   attr_accessor :number, :type, :carriages, :speed, :route, :current_station_index
 
   def initialize(number)
@@ -20,6 +22,7 @@ class Train
     @carriages = []
     @route = nil
     @current_station_index = 0
+    @@instanses << self
   end
 
   def acceleration(speed = 20)
@@ -35,7 +38,7 @@ class Train
   end
 
   def dell_carriages
-    carriages.delete_at(-1)  if speed.zero?
+    carriages.delete_at(-1) if speed.zero?
   end
 
   def add_route(route)
@@ -54,5 +57,13 @@ class Train
     route.stations[current_station_index - 1] if current_station_index >= 1
   end
 
+  class << self
+    def all
+      @@instanses
+    end
 
+    def find (number)
+      @@instanses.selern { |train| train.number == number}.first
+    end
+  end
 end

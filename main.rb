@@ -106,7 +106,7 @@ class Main
   end
 
   def train_by_number(number)
-    self.trains.select { |train| train.number == number }.first
+    Train.find(number)
   end
 
   def create_train ##Создать поезд

@@ -7,6 +7,7 @@ require_relative 'company'
 
 class Station
   include Company
+  
   attr_accessor :name, :trains, :type
 
   @@instanses = 0
@@ -33,7 +34,7 @@ class Station
       @carrg += 1
     end
 
-    end
+  end
 
   def dell_train(train)
     trains.delete (train)
@@ -49,7 +50,7 @@ class Station
   end
 
   def print_list_type
-p "Pass #{ @pass }, Carrg #{ @carrg }"
+    p "Pass #{ @pass }, Carrg #{ @carrg }"
   end
 
   def trains_list
@@ -61,6 +62,6 @@ p "Pass #{ @pass }, Carrg #{ @carrg }"
   end
 
   def all
-
+    @@instanses
   end
 end
