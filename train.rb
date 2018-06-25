@@ -8,9 +8,11 @@
 # Может перемещаться между станциями, указанными в маршруте. Показывать предыдущую станцию, текущую, следующую, на основе маршрута
 # можно разбить accessor на две часчи врайт зависать в приват
 require_relative 'company'
+require_relative 'validation'
 
 class Train
   include Company
+  include Validation
   @@instanses = []
 
   attr_accessor :number, :type, :carriages, :speed, :route, :current_station_index
@@ -21,6 +23,7 @@ class Train
     @carriages = []
     @route = nil
     @current_station_index = 0
+    validate!
     @@instanses << self
   end
 
