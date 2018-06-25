@@ -18,7 +18,6 @@ class Train
   def initialize(number)
     @number = number
     @speed = 0
-    @type = type
     @carriages = []
     @route = nil
     @current_station_index = 0
@@ -62,7 +61,7 @@ class Train
       @@instanses
     end
 
-    def find (number)
+    def find(number)
       @@instanses.selern { |train| train.number == number}.first
     end
   end

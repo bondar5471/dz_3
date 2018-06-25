@@ -21,28 +21,28 @@ class Main
   end
 
   def text_ui
-  loop do
+    loop do
 
-    action = choose_action
+      action = choose_action
 
-    break if action == 0
-    case action
-    when 1
-      create_station
-    when 2
-      create_train
-    when 3
-      add_carriage
-    when 4
-      dell_carriage
-    when 5
-      add_train_to_station
-    when 6
-      train_on_station
-    else
-      puts 'Неверный код операции'
-    end
+      break if action == 0
+      case action
+      when 1
+        create_station
+      when 2
+        create_train
+      when 3
+        add_carriage
+      when 4
+        dell_carriage
+      when 5
+        add_train_to_station
+      when 6
+        train_on_station
+      else
+        puts 'Неверный код операции'
       end
+    end
   end
 
   private
@@ -89,11 +89,11 @@ class Main
     if train
       case train.type
       when :passenger_train
-      train.add_carriages
-      puts 'Пассажирский вагон добавлен'
+        train.add_carriages
+        puts 'Пассажирский вагон добавлен'
       when :cargo_train
-      train.add_carriages
-      puts 'Пассажирский вагон добавлен'
+        train.add_carriages
+        puts 'Пассажирский вагон добавлен'
       end
     end
   end
@@ -132,10 +132,10 @@ class Main
   end
 
   def create_station
-  puts 'Введите название станции'
-  station_name = gets.chomp
-  stations << Station.new(station_name)
-  puts "Станция #{station_name} создана"
+    puts 'Введите название станции'
+    station_name = gets.chomp
+    stations << Station.new(station_name)
+    puts "Станция #{station_name} создана"
   end
 
   def trains_list(type = nil)

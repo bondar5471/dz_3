@@ -7,17 +7,15 @@ require_relative 'company'
 
 class Station
   include Company
-  
+
   attr_accessor :name, :trains, :type
 
   @@instanses = 0
 
-  def initialize (name)
+  def initialize(name)
     @name = name
     @trains = []
     @type = nil
-    @pass = 0
-    @carrg = 0
     @@instanses +=1
 
   end
@@ -26,18 +24,12 @@ class Station
     @@instanses
   end
 
-  def add_train (train)
+  def add_train(train)
     self.trains << train
-    if train.type == 'pass'
-      @pass +=1
-    elsif train.type == 'carrg'
-      @carrg += 1
-    end
-
   end
 
   def dell_train(train)
-    trains.delete (train)
+    trains.delete(train)
     if train.type == 'pass'
       @pass -=1
     elsif train.type == 'carrg'
