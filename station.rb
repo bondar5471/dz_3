@@ -4,9 +4,10 @@
 # Может показывать список поездов на станции по типу (см. ниже): кол-во грузовых, пассажирских
 # Может отправлять поезда (по одному за раз, при этом, поезд удаляется из списка поездов, находящихся на станции).
 require_relative 'company'
-
+require_relative 'validation'
 class Station
   include Company
+  include Validation
 
   attr_accessor :name, :trains, :type
 
@@ -17,6 +18,7 @@ class Station
     @trains = []
     @type = nil
     @@instanses += 1
+    validate!
 
   end
 
