@@ -89,3 +89,17 @@ module InstanceMethods
   end
 end
 
+class Test
+  include Validation
+
+  attr_accessor :name
+
+  validate :name, :presence
+  validate :name, :format, /[A-Z]{0,3}/i
+  validate :name, :type, String
+
+  def initialize(name)
+    @name = name
+  end
+end
+
