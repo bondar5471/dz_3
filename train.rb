@@ -13,10 +13,13 @@ require_relative 'validation'
 class Train
   include Company
   include Validation
+
+  NUMBER_FORMAT = /^([a-z0-9]){3}-*([a-z0-9]{2})$/i
   @@instanses = []
 
   attr_accessor :number, :type, :carriages, :speed, :route, :current_station_index
-
+  validate :number, :format, NUMBER_FORMAT
+  validate :number, :presence
   def initialize(number)
     @number = number
     @speed = 0

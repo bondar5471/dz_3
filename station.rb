@@ -11,6 +11,7 @@ class Station
 
   attr_accessor :name, :trains, :type
 
+  validate :name, :trains
   @@instanses = 0
 
   def initialize(name)
