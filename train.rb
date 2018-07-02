@@ -59,6 +59,14 @@ class Train
     route.stations[current_station_index - 1] if current_station_index >= 1
   end
 
+  def take_place
+    @quantity_places +=1
+  end
+
+  def each_carriage
+    carriages.each { |carriage| yield(carriage) }
+  end
+
   class << self
     def all
       @@instanses

@@ -39,6 +39,8 @@ class Main
         add_train_to_station
       when 6
         train_on_station
+      when 7
+        place_or_volume
       else
         puts 'Неверный код операции'
       end
@@ -47,11 +49,50 @@ class Main
 
   private
 
-  def train_on_station
-    station = choose_station
-    return puts 'Нет такой станции' unless station
-    puts "Список поездов на станции #{station.name}: #{station.trains_list}"
+  def station_info(station)
+    station.each_train do |train|
+      puts "Номер поезда #{train.number} Тип #{train.type} Вагоны #{train.carriages.count}"
+      x = 1
+      train.each_carriage do |carriage|
+        puts "#{x}  #{carriage.info}"
+        x += 1
+      end
+    end
   end
+
+  def place_or_volume
+    train = choose_train
+    puts "Номер поезда #{train.number} Тип #{train.type} Вагоны #{train.carriages.count}"
+    x = 1
+    train.each_carriage do |carriage|
+      puts "#{x}  #{carriage.info}"
+      x += 1
+    end
+    puts 'Choose carriage by number'
+    carriage_index = gets.chomp.to_i
+    carriage = train.carriages[carriage_index - 1]
+    case carriage.type
+    when :passenger
+      carriage.seats_count
+      puts 'Вы заняли 1 место'
+    when :cargo
+      puts "Введите обьем который хотите занять! Свободно: #{carriage.available_volume}"
+      volume = gets.chomp.to_i
+      if carriage.taken_volume(volume)
+        puts "Вы заняли обьем #{volume}"
+      else
+        puts 'Вы не можете занять столько обьема'
+      end
+    end
+  end
+
+
+def train_on_station
+  station = choose_station
+  return puts 'Нет такой станции' unless station
+  puts "Список поездов на станции #{station.name}: #{station.trains_list}"
+  station_inf(station)
+end
 
   def add_train_to_station
     station = choose_station
@@ -89,10 +130,14 @@ class Main
     if train
       case train.type
       when :passenger_train
-        train.add_carriages
+        puts 'Введите количество мест'
+        seats = gets.chomp.to_i
+        train.add_carriage(PassengerCarriage.new(seats))
         puts 'Пассажирский вагон добавлен'
       when :cargo_train
-        train.add_carriages
+        puts 'Введите обьем вагона'
+        volume = gets.chomp.to_i
+        train.add_carriage(CargoCarriage.new(volume))
         puts 'Грузовой вагон добавлен'
       end
     end
@@ -155,6 +200,7 @@ class Main
     4 - Удалить вагон
     5 - Поместить поезд на станию
     6 - Просмотреть список станций и список поездов
+    7 - Занять место или обьем  в вагоне
          )
     gets.chomp.to_i
   end
