@@ -26,6 +26,10 @@ class Station
     @@instanses
   end
 
+  def each_train
+    trains.each { |train| yield(train) }
+  end
+
   def add_train(train)
     self.trains << train
   end
@@ -57,5 +61,9 @@ class Station
 
   def all
     @@instanses
+  end
+
+  def trai_block
+    trains.each { |train| yield(train) }
   end
 end

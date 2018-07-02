@@ -5,9 +5,9 @@ module Validation
   protected
 
   def validate!
-    raise "Номер не должен быть пустым" if number.nil?
-    raise "Номер не должен быть меньше 5 симоволов" if number.length < 5
-    raise "Формат номера не подходит" if number !~ NUMBER_FORMAT
+    raise 'Номер не должен быть пустым' if number.nil?
+    raise 'Номер не должен быть меньше 5 симоволов' if number.length < 5
+    raise 'Формат номера не подходит' if number !~ NUMBER_FORMAT
     true
   end
 

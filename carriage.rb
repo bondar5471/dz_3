@@ -7,4 +7,7 @@ class Carriage
     @company_name = company_name
   end
 
+  def info
+    raise NotImplementedError, 'Нужно переопределить информацию'
+  end
 end
