@@ -10,5 +10,4 @@ class Carriage
   def info
     raise NotImplementedError, 'Нужно переопределить информацию'
   end
-
 end

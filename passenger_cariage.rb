@@ -1,10 +1,9 @@
 class PassengerCarriage < Carriage
-
   attr_accessor :seats_count, :taken_seats
 
   def initialize(seats_count)
-  @seats_count = seats_count
-  @taken_seats = 0
+    @seats_count = seats_count
+    @taken_seats = 0
   end
 
   def taken_a_seat

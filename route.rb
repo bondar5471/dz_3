@@ -20,5 +20,4 @@ class Route
   def print_list_stations
     p @stations
   end
-
 end

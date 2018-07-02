@@ -8,7 +8,7 @@ class CargoCarriage < Carriage
   end
 
   def take_volume(volume)
-    self.taken_volume += total_volume - volume >=taken_volume
+    self.taken_volume += total_volume - volume >= taken_volume
   end
 
   def available_volume

@@ -60,7 +60,7 @@ class Train
   end
 
   def take_place
-    @quantity_places +=1
+    @quantity_places += 1
   end
 
   def each_carriage

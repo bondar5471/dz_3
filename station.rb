@@ -64,7 +64,6 @@ class Station
   end
 
   def trai_block
-    trains.each { |train| yield(train)}
-
+    trains.each { |train| yield(train) }
   end
 end

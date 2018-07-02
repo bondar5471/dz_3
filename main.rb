@@ -25,7 +25,7 @@ class Main
 
       action = choose_action
 
-      break if action == 0
+      break if action.zero?
       case action
       when 1
         create_station
@@ -115,7 +115,7 @@ end
   end
 
   def station_by_name(name)
-    self.stations.select{ |station| station.name == name }.first
+    self.stations.select { |station| station.name == name }.first
   end
 
   def dell_carriage
